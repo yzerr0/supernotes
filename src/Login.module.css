@@ -1,0 +1,50 @@
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.labelText {
+    font-size: 0.875rem;
+    color: orchid;
+    margin-bottom: 0.25rem;
+}
+
+.textField {
+    width: 100%;
+    padding: 0 0.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px 0 #ccc;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+}
+
+.button {
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: orchid;
+    color: #fff;
+    height: 2.5rem;
+    font-size: 0.875;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darkorchid;
+}
