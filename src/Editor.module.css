@@ -1,6 +1,6 @@
 .toolbar {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #e0e0e0;
     padding: 1rem;
     gap: 0.25rem;
@@ -39,4 +39,9 @@
 .toolbarButtonActive {
     background-color: #bdbdbd;
     composes: toolbarButton;
+}
+
+.toolbarLeft, .toolbarRight {
+    display: flex;
+    gap: 0.25rem;
 }

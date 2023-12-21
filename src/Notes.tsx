@@ -91,7 +91,7 @@ function App({userData}: Props) {
     <div className= {styles.pageContainer}>
       <div className={styles.sidebar}>
         <button className={styles.sidebarButton} onClick={createNewNote}>
-          Create Note
+          create note
         </button>
         <div className={styles.sidebarList}>
           {notesList.map((note) => (
