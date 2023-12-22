@@ -106,16 +106,14 @@ function Editor({ note, onChange }: Props) {
     return (
         <div className={styles.editorContainer}>
             <div className={styles.toolbar}>
-                <div className={styles.toolbarLeft}>
+                <div className={styles.toolbarLarge}>
                     <button className={editor?.isActive('bold') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={boldToggle}>bold</button>
                     <button className={editor?.isActive('italic') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={italicToggle}>italic</button>
                     <button className={editor?.isActive('underline') ? styles.toolbarButtonActive : styles.toolbarButton } onClick={underlineToggle}>underline</button>
                     <button className={editor?.isActive('strike') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={strikeToggle}>strike</button>
                     <button className={editor?.isActive('code') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={codeToggle}>code</button>
-                    <button className={styles.toolbarButton} onClick={clearMarks}>clear marks</button>
-                    <button className={styles.toolbarButton} onClick={clearNodes}>clear nodes</button>
                 </div>
-                <div className={styles.toolbarRight}>
+                <div className={styles.toolbarMedium}>
                     <button className={editor?.isActive('paragraph') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={paragraphToggle}>paragraph</button>
                     <button className={editor?.isActive('heading', { level: 1 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading1Toggle}>h1</button>
                     <button className={editor?.isActive('heading', { level: 2 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading2Toggle}>h2</button>
@@ -123,8 +121,12 @@ function Editor({ note, onChange }: Props) {
                     <button className={editor?.isActive('heading', { level: 4 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading4Toggle}>h4</button>
                     <button className={editor?.isActive('heading', { level: 5 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading5Toggle}>h5</button><button className={editor?.isActive('heading', { level: 6 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading6Toggle}>h6</button>
                 </div>
+                <div className={styles.toolbarSmall}>
+                    <button className={styles.toolbarButton} onClick={clearMarks}>clear marks</button>
+                    <button className={styles.toolbarButton} onClick={clearNodes}>clear nodes</button>
+                </div>
             </div>
-            <EditorContent editor={editor} className={styles.textEditorContent} />
+            <EditorContent editor={editor} className={styles.textEditorContent}/>
         </div>
     )
 }
