@@ -5,6 +5,7 @@
     justify-content: center;
     height: 100vh;
     overflow: auto;
+    background-color: #282a36;
 }
 
 .loginContainer {
@@ -16,12 +17,12 @@
     width: 100%;
     max-width: 20rem;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #282a36;
 }
 
 .labelText {
     font-size: 0.875rem;
-    color: orchid;
+    color: rgb(134, 177, 218);
     margin-bottom: 0.25rem;
 }
 
@@ -29,7 +30,7 @@
     width: 100%;
     padding: 0 0.5rem;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 5px 0 #ccc;
+    box-shadow: 0 2px 5px 1px rgb(88, 153, 214);
     border-radius: 0.25rem;
     height: 2.5rem;
 }
@@ -38,7 +39,7 @@
     border: none;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
-    background-color: orchid;
+    background-color: rgb(134, 177, 218);
     color: #fff;
     height: 2.5rem;
     font-size: 0.875;
@@ -46,5 +47,5 @@
 }
 
 .button:hover {
-    background-color: darkorchid;
+    background-color: rgb(88, 153, 214);
 }
