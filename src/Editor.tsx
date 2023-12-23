@@ -101,6 +101,29 @@ function Editor({ note, onChange }: Props) {
         editor ? editor.chain().focus().setHeading({ level: 6 }).run() : null;
     }
 
+    const bulletListToggle = () => {
+        editor ? editor.chain().focus().toggleBulletList().run() : null;
+    }
+
+    const orderedListToggle = () => {
+        editor ? editor.chain().focus().toggleOrderedList().run() : null;
+    }
+
+    const codeBlockToggle = () => {
+        editor ? editor.chain().focus().toggleCodeBlock().run() : null;
+    }
+
+    const blockquoteToggle = () => {
+        editor ? editor.chain().focus().toggleBlockquote().run() : null;
+    }
+
+    const horizontalRule = () => {
+        editor ? editor.chain().focus().setHorizontalRule().run() : null;
+    }
+
+    const hardBreak = () => {
+        editor ? editor.chain().focus().setHardBreak().run() : null;
+    }
     
 
     return (
@@ -112,6 +135,10 @@ function Editor({ note, onChange }: Props) {
                     <button className={editor?.isActive('underline') ? styles.toolbarButtonActive : styles.toolbarButton } onClick={underlineToggle}>underline</button>
                     <button className={editor?.isActive('strike') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={strikeToggle}>strike</button>
                     <button className={editor?.isActive('code') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={codeToggle}>code</button>
+                    <button className={editor?.isActive('bulletList') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={bulletListToggle}>bullet list</button>
+                    <button className={editor?.isActive('orderedList') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={orderedListToggle}>ordered list</button>
+                    <button className={editor?.isActive('codeBlock') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={codeBlockToggle}>code block</button>
+                    <button className={editor?.isActive('blockquote') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={blockquoteToggle}>blockquote</button>
                 </div>
                 <div className={styles.toolbarMedium}>
                     <button className={editor?.isActive('paragraph') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={paragraphToggle}>paragraph</button>
@@ -119,11 +146,15 @@ function Editor({ note, onChange }: Props) {
                     <button className={editor?.isActive('heading', { level: 2 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading2Toggle}>h2</button>
                     <button className={editor?.isActive('heading', { level: 3 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading3Toggle}>h3</button>
                     <button className={editor?.isActive('heading', { level: 4 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading4Toggle}>h4</button>
-                    <button className={editor?.isActive('heading', { level: 5 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading5Toggle}>h5</button><button className={editor?.isActive('heading', { level: 6 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading6Toggle}>h6</button>
+                    <button className={editor?.isActive('heading', { level: 5 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading5Toggle}>h5</button>
+                    <button className={editor?.isActive('heading', { level: 6 }) ? styles.toolbarButtonActive : styles.toolbarButton} onClick={heading6Toggle}>h6</button>
+                    
                 </div>
                 <div className={styles.toolbarSmall}>
                     <button className={styles.toolbarButton} onClick={clearMarks}>clear marks</button>
                     <button className={styles.toolbarButton} onClick={clearNodes}>clear nodes</button>
+                    <button className={editor?.isActive('horizontalRule') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={horizontalRule}>horizontal rule</button>
+                    <button className={editor?.isActive('hardBreak') ? styles.toolbarButtonActive : styles.toolbarButton} onClick={hardBreak}>hard break</button>
                 </div>
             </div>
             <EditorContent editor={editor} className={styles.textEditorContent}/>
