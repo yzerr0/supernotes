@@ -27,29 +27,40 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     overflow: auto;
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+
+strong {
+    color: rgb(218, 158, 233);
+}
+
+em {
+    color: rgb(245, 227, 149);
 }
 
 .toolbarButton {
     border: none;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #e0e0e0;
-    color: #000000;
+    background-color: #3d404e;
+    color: #f8f8f2;
     cursor: pointer;
 }
 
 .toolbarButton:hover {
-    background-color: #bdbdbd;
+    background-color: rgb(134, 177, 218);
 }
 
 .toolbarButtonActive {
-    background-color: #bdbdbd;
+    background-color: rgb(88, 153, 214);
+    box-shadow: 0 0 0.2rem 0.2rem rgb(134, 177, 218);
     composes: toolbarButton;
 }
 
 .toolbarSmall, .toolbarMedium, .toolbarLarge {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.5rem;
     padding: 0.25rem;
 }
 

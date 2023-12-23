@@ -3,6 +3,8 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    background-color: #282a36;;
+    color: #f8f8f2;
 }
 
 .sidebar {
@@ -25,15 +27,15 @@
     border: none;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #e0e0e0;
-    box-shadow: 0px 2px 5px 0px #e0e0e0;
-    color: #000000;
+    background-color: rgb(60, 139, 212);
+    box-shadow: 0 0 0.2rem 0.2rem rgb(115, 167, 216);
+    color: #fff;
     cursor: pointer;
     margin: 1.25rem;
 }
 
 .sidebarButton:hover {
-    background-color: #bdbdbd;
+    background-color: rgb(134, 177, 218);
 }
 
 .sidebarList {
@@ -54,26 +56,28 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
 .sidebarListItem:hover {
-    background-color: #e0e0e0;
+    background-color: rgb(134, 177, 218);
 }
 
 .sidebarListItemActive {
-    background-color: #bdbdbd;
+    background-color: rgb(123, 172, 218);
     composes: sidebarListItem;
 }
 
 .sidebarDelete {
     color: #ff0000;
     border-radius: 0.5rem;
-    border: 1px solid #ff0000;
     font-size: 0.75rem;
+    background-color: #3d404e;
 }
 
 .sidebarDelete:hover {
     background-color: #ff0000;
+    border: 1px solid #ff0000;
     color: #ffffff;
 }
 
